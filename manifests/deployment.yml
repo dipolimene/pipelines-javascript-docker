@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dipolimenepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dipolimenepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dipolimenepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dipolimenepipelinesjavascriptdocker 
+          image: emtwentyacr.azurecr.io/dipolimenepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
